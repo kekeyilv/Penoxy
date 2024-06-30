@@ -1,11 +1,11 @@
-cert: "cert.der"
-key: "key.der"
-bind: "127.0.0.1:10024"
+cert: "cert.der" #TLS cert file
+key: "key.der" #TLS key file
+bind: "127.0.0.1:10024" #Proxy server address
 hosts:
-  - host_name: "myhost"
-    passkey: "Ssqk!@3k902.dw>>"
+  - host_name: "myhost" #Host name
+    passkey: "mykey" #Host passkey
 services:
-  - name: "My service"
-    bind: "127.0.0.1:8089"
-    host_name: "myhost"
-    remote: "127.0.0.1:5500"
+  - name: "My service" #Service name
+    bind: "127.0.0.1:8089" #Service address (Local)
+    host_name: "myhost" #Host name
+    remote: "127.0.0.1:5500" #Service address (Remote)

@@ -99,9 +99,7 @@ async fn run() -> Result<(), Box<dyn Error>> {
     let (config, _guard) = utils::init(
         "./penoxy_client.yml",
         vec![
-            "client",
             "server",
-            "server_name",
             "server_cert",
             "passkey",
             "host_name",
@@ -116,7 +114,7 @@ async fn run() -> Result<(), Box<dyn Error>> {
         )?)))
         .with_no_client_auth();
 
-    let client_addr = config["client"].as_str().unwrap().parse::<SocketAddr>()?;
+    let client_addr = "0.0.0.0:0".parse::<SocketAddr>()?;
     let mut endpoint = Endpoint::client(client_addr)?;
     endpoint.set_default_client_config(ClientConfig::new(Arc::new(QuicClientConfig::try_from(
         client_config,
@@ -182,7 +180,7 @@ async fn new_connection(
 ) -> Result<(), Box<dyn Error>> {
     let server_addr = config["server"].as_str().unwrap().parse::<SocketAddr>()?;
     let connection = endpoint
-        .connect(server_addr, config["server_name"].as_str().unwrap())?
+        .connect(server_addr, "server")?
         .await?;
     let mut context = StreamContext::new(connection.open_bi().await?);
     info!(
