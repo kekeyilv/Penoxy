@@ -1,4 +1,6 @@
 # Penoxy
+[![Build](https://github.com/kekeyilv/Penoxy/actions/workflows/build.yml/badge.svg)](https://github.com/kekeyilv/Penoxy/actions/workflows/build.yml)
+
 `Penoxy` is a proxy software using the QUIC protocol. It provides a secure bi-directional proxy service between the server and clients, which can be used to expose intranet ports to the internet or make network services accessible on the client/server.
 ## Usage
 ### TLS configure
