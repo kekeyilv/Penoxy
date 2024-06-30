@@ -1,0 +1,12 @@
+client: "0.0.0.0:0"
+server: "127.0.0.1:10024"
+host_name: "myhost"
+server_name: "penoxy.io"
+server_cert: "cert.der"
+passkey: "Ssqk!@3k902.dw>>"
+max_connection: 4
+log: "client.log"
+services:
+  - name: "sb"
+    bind: "127.0.0.1:8099"
+    remote: "218.94.25.46:443"

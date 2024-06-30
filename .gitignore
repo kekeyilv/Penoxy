@@ -1,0 +1,4 @@
+/target
+/penoxy_logs_*
+/*.der
+*.DS_Store

@@ -1,0 +1,11 @@
+cert: "cert.der"
+key: "key.der"
+bind: "127.0.0.1:10024"
+hosts:
+  - host_name: "myhost"
+    passkey: "Ssqk!@3k902.dw>>"
+services:
+  - name: "My service"
+    bind: "127.0.0.1:8089"
+    host_name: "myhost"
+    remote: "127.0.0.1:5500"

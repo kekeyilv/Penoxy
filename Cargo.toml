@@ -1,0 +1,16 @@
+[package]
+name = "penoxy"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+quinn = "0.11.2"
+serde_yml = "0.0.10"
+tokio = { version = "1.38.0", features = ["rt-multi-thread", "macros"] }
+serde = "1.0"
+rustls = { version = "=0.20.9", features = ["dangerous_configuration", "quic"]  }
+tracing = "0.1"
+tracing-subscriber = "0.3.18"
+tracing-appender = "0.2"
